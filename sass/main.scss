@@ -43,32 +43,64 @@ body {
 }
 
 .faq-container {
-  height: 45rem;
   width: 85rem;
+  min-width: 85rem;
+  height: 42.5rem;
+  min-height: 42.5rem;
   border-radius: 2rem;
   background-color: var(--light-grayish-blue);
   display: flex;
   justify-content: space-between;
+  position: relative;
+  margin: 0 10rem;
 }
 
 .faq-left {
   width: 100%;
   position: relative;
-
-  &__pattern {
-    height: auto;
-    width: 100%;
-    transform: translate(-50%, -13%) scale(200%);
-    position: relative;
-  }
+  overflow: hidden;
 
   &__box {
     position: absolute;
-    top: 50%;
-    left: -25%;
+    top: 41%;
+    left: -10.8%;
+    z-index: 15;
   }
-  
 }
+
+.pattern-container {
+  &__pattern {
+    height: auto;
+    width: 100%;
+    transform: translate(-55%, -13%) scale(200%);
+    position: relative;
+  }
+}
+
+.woman-container {
+  position: absolute;
+  left: -18%;
+  top: 8%;
+  z-index: 5;
+  &__woman {
+  }
+}
+
 .faq-right {
   width: 100%;
+  padding: 4rem 6rem 4rem 4rem;
+  &__header {    
+    font: normal normal 700 3rem/3rem 'Kumbh Sans', sans-serif;
+    text-transform: uppercase;
+  }
+  &__list {
+    font: normal normal 400 1.2rem/1.2rem 'Kumbh Sans', sans-serif;
+    list-style: none;
+    margin-top: 3.5rem;
+  }
+
+  &__list-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08)
+  }
 }
